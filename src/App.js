@@ -1,9 +1,10 @@
 import "./App.css";
 import "../src/Components/Home";
 import "../src/Components/MainPicture";
-import "../src/Components/Option1";
+import "./Components/SearchPage";
 import "../src/Components/Option2";
 import "../src/Components/Option3";
+import SearchPage from "./Components/SearchPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <button class="delete" aria-label="delete"></button>
       </div>
       <div class="message-body">test bulma</div>
+    <SearchPage/>
     </article>
   );
 }
