@@ -2,7 +2,7 @@
 
 function ResultCarousel() {
     return (
-        Something
+      <p>Something</p>
     );
   }
 

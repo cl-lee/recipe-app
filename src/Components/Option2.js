@@ -2,7 +2,7 @@
 
 function Option2() {
     return (
-        Something
+      <p>Something</p>
     );
   }
 

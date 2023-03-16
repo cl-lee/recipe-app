@@ -2,7 +2,7 @@
 
 function Recipe() {
     return (
-        Something
+      <p>Something</p>
     );
   }
 

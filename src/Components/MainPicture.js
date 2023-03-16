@@ -2,7 +2,7 @@
 
 function MainPicture() {
     return (
-        Something
+      <p>Something</p>
     );
   }
 
