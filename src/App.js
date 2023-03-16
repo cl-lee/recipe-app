@@ -4,7 +4,6 @@ import "../src/Components/MainPicture";
 import "../src/Components/Option1";
 import "../src/Components/Option2";
 import "../src/Components/Option3";
-import "bulma/css/bulma.css";
 
 function App() {
   return (
