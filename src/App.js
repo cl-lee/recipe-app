@@ -1,11 +1,20 @@
-import './App.css';
-fetch("https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=901555f1&app_key=42eb9c88a0deb3aae3cef1a802a1283b")
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+import "./App.css";
+import "../src/Components/Home";
+import "../src/Components/MainPicture";
+import "../src/Components/Option1";
+import "../src/Components/Option2";
+import "../src/Components/Option3";
+import "bulma/css/bulma.css";
 
 function App() {
   return (
-   <h1>Hello World!</h1>
+    <article class="message">
+      <div class="message-header">
+        <p>test bulma</p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+      <div class="message-body">test bulma</div>
+    </article>
   );
 }
 
