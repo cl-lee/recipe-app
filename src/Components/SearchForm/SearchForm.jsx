@@ -3,31 +3,45 @@ import { useState } from "react"
 
 export default function SearchForm() {
 
-const [ingredientList, setIngredientList] = useState('');
+    const [ingredients, setIngredient] = useState([]);
+    const [newIngredient, setNewIngredient] = useState('');
 
+    // console.log(ingredient)
+
+    function addIngredient() {
+        setIngredient([
+            ...ingredients,
+            newIngredient
+        ])
+        setNewIngredient('')
+    }
     return (
         <>
-        <form >
+            <form >
 
-            <h2>List your ingredients</h2>
-            <input 
-            type="text"
-            name="ingredient"
-            id="ingredient" 
-            required
-            value={ingredientList}
-            onChange={(e) =>setIngredientList(e.target.value) }/>
-            <button onClick={(e) =>{
-                e.preventDefault();
-                // ingredientArray.push(ingredientList)
-                console.log(ingredientList)
-            }} id="add">Add</button>
-            <ul>
+                <h2>List your ingredients</h2>
 
-            </ul>
-            
-        </form>
-       
+                <input
+                    type="text"
+                    name="ingredient"
+                    id="ingredient"
+                    required
+                    value={newIngredient}
+                    onChange={(e) => setNewIngredient(e.target.value)} />
+                <button onClick={(e) => {
+                    e.preventDefault()
+                    addIngredient()
+                    console.log(ingredients, newIngredient)
+                }}
+                    id="add">Add</button>
+                <ul>
+                    { ingredients.map(ingredient=>(
+                        <li>{ingredient}</li>
+                    )) }
+                </ul>
+
+            </form>
+
         </>
     )
 }
