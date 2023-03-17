@@ -1,4 +1,4 @@
-import "./ResultCarousel";
+import ResultCarousel from "./ResultCarousel";
 
 function Recipe() {
   return (
@@ -31,9 +31,11 @@ function Recipe() {
 
       {/* RECIPE CARD (ResultCarousel) */}
       {/* iterate fetch results, and display them as recipe cards in carousel. Render x number of pages in carousel(?) */}
+      <ResultCarousel></ResultCarousel>
 
       {/* EDIT SEARCH BUTTON */}
       {/* goes back to last page with saved results */}
+      {/* make button bigger */}
       <button class="button is-responsive">Default</button>
     </div>
   );
@@ -41,7 +43,7 @@ function Recipe() {
 
 export default Recipe;
 
-// pseudocode
+// --- pseudocode ---
 // CSS:
 // background-color: #F4DF20; 
 // add a couple of food/dishes images (see wireframe);
