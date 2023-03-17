@@ -9,11 +9,14 @@ export default function SearchForm() {
     // console.log(ingredient)
 
     function addIngredient() {
-        setIngredient([
-            ...ingredients,
-            newIngredient
-        ])
-        setNewIngredient('')
+        if (newIngredient !=='') {
+            
+            setIngredient([
+                newIngredient,
+                ...ingredients
+            ])
+            setNewIngredient('')
+        }
     }
     return (
         <>
@@ -25,7 +28,6 @@ export default function SearchForm() {
                     type="text"
                     name="ingredient"
                     id="ingredient"
-                    required
                     value={newIngredient}
                     onChange={(e) => setNewIngredient(e.target.value)} />
                 <button onClick={(e) => {
@@ -36,7 +38,8 @@ export default function SearchForm() {
                     id="add">Add</button>
                 <ul>
                     { ingredients.map(ingredient=>(
-                        <li>{ingredient}</li>
+                        <li>{ingredient}<button>Remove</button></li>
+                        
                     )) }
                 </ul>
 
