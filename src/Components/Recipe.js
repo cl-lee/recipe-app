@@ -3,8 +3,10 @@ import "./ResultCarousel";
 function Recipe() {
   return (
     <div>
+      {/* NAVIGATION BAR */}
       <nav className="navbar is-black">
         <div className="navbar-brand">
+          {/* Logo */}
           <a className="navbar-item" href="https://bulma.io">
             <img
               src="https://bulma.io/images/bulma-logo-white.png"
@@ -13,112 +15,35 @@ function Recipe() {
               height="28"
             />
           </a>
-          <div
-            className="navbar-burger"
-            data-target="navbarExampleTransparentExample"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
-          <div className="navbar-start">
-            <a className="navbar-item" href="https://bulma.io/">
-              Home
-            </a>
-            <div className="navbar-item has-dropdown is-hoverable">
-              <a
-                className="navbar-link"
-                href="https://bulma.io/documentation/overview/start/"
-              >
-                Docs
+          {/* Home button */}
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
               </a>
-              <div className="navbar-dropdown is-boxed">
-                <a
-                  className="navbar-item"
-                  href="https://bulma.io/documentation/overview/start/"
-                >
-                  Overview
-                </a>
-                <a
-                  className="navbar-item"
-                  href="https://bulma.io/documentation/overview/modifiers/"
-                >
-                  Modifiers
-                </a>
-                <a
-                  className="navbar-item"
-                  href="https://bulma.io/documentation/columns/basics/"
-                >
-                  Columns
-                </a>
-                <a
-                  className="navbar-item"
-                  href="https://bulma.io/documentation/layout/container/"
-                >
-                  Layout
-                </a>
-                <a
-                  className="navbar-item"
-                  href="https://bulma.io/documentation/form/general/"
-                >
-                  Form
-                </a>
-                <hr className="navbar-divider" />
-                <a
-                  className="navbar-item"
-                  href="https://bulma.io/documentation/elements/box/"
-                >
-                  Elements
-                </a>
-                <a
-                  className="navbar-item is-active"
-                  href="https://bulma.io/documentation/components/breadcrumb/"
-                >
-                  Components
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="navbar-end">
-            <div className="navbar-item">
-              <div className="field is-grouped">
-                <p className="control">
-                  <a
-                    className="bd-tw-button button"
-                    data-social-network="Twitter"
-                    data-social-action="tweet"
-                    data-social-target="https://bulma.io"
-                    target="_blank"
-                    href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms"
-                  >
-                    <span className="icon">
-                      <i className="fab fa-twitter"></i>
-                    </span>
-                    <span>Tweet</span>
-                  </a>
-                </p>
-                <p className="control">
-                  <a
-                    className="button is-primary"
-                    href="https://github.com/jgthms/bulma/releases/download/0.9.4/bulma-0.9.4.zip"
-                  >
-                    <span className="icon">
-                      <i className="fas fa-download"></i>
-                    </span>
-                    <span>Download</span>
-                  </a>
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </nav>
+
+      {/* PAGE TITLE */}
+      <h1 class="title">What you can make</h1>
+
+      {/* RECIPE CARD (ResultCarousel) */}
+      {/* iterate fetch results, and display them as recipe cards in carousel. Render x number of pages in carousel(?) */}
+
+      {/* EDIT SEARCH BUTTON */}
+      {/* goes back to last page with saved results */}
+      <button class="button is-responsive">Default</button>
     </div>
   );
 }
 
 export default Recipe;
+
+// pseudocode
+// CSS:
+// background-color: #F4DF20; 
+// add a couple of food/dishes images (see wireframe);
+// card background-color: #00AF54, opacity: 0.6;
+// button background-color: #B6671E;
