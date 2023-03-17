@@ -27,4 +27,6 @@ function ResultCarousel(props) {
 export default ResultCarousel;
 
 // ---pseudocode---
+// LOGIC:
 // use props
+// card is a clickable link to the actual recipe page (nest card div in <a> tag?)
