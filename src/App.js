@@ -9,13 +9,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <Router basename="cl-lee/recipe-app">
+    // <Router basename="cl-lee/recipe-app">
       <div>
-        <Routes>
+        <Recipe></Recipe>
+        {/* <Routes>
           <Route path="search-results" element={<Recipe />} />
-        </Routes>
+        </Routes> */}
       </div>
-    </Router>
+    // </Router>
   );
 }
 
