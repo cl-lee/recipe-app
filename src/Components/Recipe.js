@@ -14,7 +14,7 @@ function Recipe() {
           src="https://bulma.io/images/placeholders/128x128.png"
           alt="Logo"
         />
-        {/* Home button */}
+        {/* Home button */} 
         {/* <button id="home-button"><Link to="/">Home</Link></button> */}
       </nav>
       <main id="recipe-page-main">
