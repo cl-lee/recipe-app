@@ -1,0 +1,26 @@
+#nav-bar {
+  height: 10vh;
+  background-color: #2d3047;
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 1vw 1vh 1vw;
+}
+
+#nav-bar #logo {
+  border-radius: 50%;
+}
+
+#home-button {
+  width: 5rem;
+  border-radius: 1rem;
+  background-color: #466c43;
+  color: #ffffff;
+}
+
+#recipe-page-header {
+    padding: 1.5rem;
+}
+
+#recipe-page-title {
+  font-weight: bold;
+}
