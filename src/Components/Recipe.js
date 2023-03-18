@@ -1,11 +1,12 @@
 import ResultCarousel from "./ResultCarousel";
 import sampleData from "./temp.json";
 import "./Recipe.css";
+import { Link } from "react-router-dom";
 let searchResults = sampleData.hits;
 
 function Recipe() {
   return (
-    <div>
+    <div className="body">
       {/* NAVIGATION BAR */}
       <nav id="nav-bar">
         {/* Logo */}
@@ -30,7 +31,12 @@ function Recipe() {
       {/* goes back to last page with saved results */}
       {/* make button bigger */}
       <footer>
-        <button className="button is-responsive">Edit Search</button>
+        <div className="content has-text-centered">
+          {/* Button routes back to search page */}
+          {/* <button className="button is-rounded is-responsive">
+            <Link to="search-page">Edit Search</Link>
+          </button> */}
+        </div>
       </footer>
     </div>
   );
