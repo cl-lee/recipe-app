@@ -9,14 +9,21 @@ export default function SearchForm() {
     // console.log(ingredient)
 
     function addIngredient() {
-        if (newIngredient !=='') {
-            
+        if (newIngredient !== '') {
+
             setIngredient([
                 newIngredient,
                 ...ingredients
             ])
             setNewIngredient('')
         }
+    }
+
+    function handleRemove(id) {
+       
+        const newList = ingredients.filter((item) => ingredients[id] !== id)
+      setIngredient(newList)
+        console.log(id)
     }
     return (
         <>
@@ -37,10 +44,16 @@ export default function SearchForm() {
                 }}
                     id="add">Add</button>
                 <ul>
-                    { ingredients.map(ingredient=>(
-                        <li>{ingredient}<button>Remove</button></li>
-                        
-                    )) }
+                    {ingredients.map(ingredient => (
+                        <li key={ingredients.indexOf(ingredient)}>{ingredient}
+                            
+                            <button onClick={(e) => {
+                                e.preventDefault();
+                                handleRemove(ingredients.indexOf(ingredient))
+                            }}>Remove</button>
+                        </li>
+
+                    ))}
                 </ul>
 
             </form>
