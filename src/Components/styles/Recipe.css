@@ -35,6 +35,11 @@
   position: relative;
 }
 
+#recipe-page-footer button {
+  background-color: #B6671E;
+  color: white;
+}
+
 #decoration-groceries {
   width: 40%;
   height: 100%;

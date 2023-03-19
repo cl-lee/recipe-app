@@ -26,7 +26,7 @@ function Recipe() {
       <footer id="recipe-page-footer">
         {/* Edit search button */}
         <div className="buttons is-centered">
-          <button className="button is-rounded is-medium is-responsive">
+          <button className="button is-rounded is-large is-responsive">
             Edit Search
           </button>
         </div>
