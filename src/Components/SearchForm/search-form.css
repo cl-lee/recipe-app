@@ -1,3 +1,33 @@
+#add-button {
+    background-color: #2D3047;
+    border-radius: 50%;
+    color: white;
+    /* font-size: 16px; */
+    /* text-align: center; */
+    /* display: inline-block; */
+    border: none;
+    /* cursor: pointer; */
+}
+
+#remove-button {
+    background-color: #2D3047;
+    border-radius: 50%;
+    color: white;
+ 
+}
+
 #search-button {
-    background-color: brown;
+    background-color: #B61E1E;
+    color: white;
+}
+
+form {
+    display: block;
+    border: #2D3047 solid 2px;
+    padding: 20px;
+    
+}
+
+.control {
+    width: 75%;
 }

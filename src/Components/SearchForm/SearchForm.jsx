@@ -2,11 +2,11 @@ import { useState } from "react"
 import "./search-form.css"
 
 export default function SearchForm() {
-
+    // states to store list of ingredients and new ingredient written in the input field
     const [ingredients, setIngredient] = useState([]);
     const [newIngredient, setNewIngredient] = useState('');
 
-    // console.log(ingredient)
+
 
     function addIngredient() {
         if (newIngredient !== '') {
@@ -32,31 +32,41 @@ export default function SearchForm() {
             <form >
 
                 <h2>List your ingredients</h2>
+                <div className="field has-addons">
+                    <div className="control">
 
-                <input
-                    type="text"
-                    name="ingredient"
-                    id="ingredient"
-                    value={newIngredient}
-                    onChange={(e) => setNewIngredient(e.target.value)} />
-                <button 
-                    className="button"
-                    onClick={(e) => {
-                        e.preventDefault()
-                        addIngredient()
-                        // console.log(ingredients, newIngredient)
-                    }}
-                    id="add">Add</button>
+                        <input
+                            type="text"
+                            name="ingredient"
+                            id="ingredient"
+                            className="input"
+                            value={newIngredient}
+                            onChange={(e) => setNewIngredient(e.target.value)} />
+                            </div>
+                        <button
+                            id="add-button"
+                            className="button "
+                            onClick={(e) => {
+                                e.preventDefault()
+                                addIngredient()
+
+                            }}>
+                            +
+                        </button>
+                </div>
                 <ul>
                     {ingredients.map(ingredient => (
                         <li key={ingredients.indexOf(ingredient)}>{ingredient}
 
                             <button
-                            className="button"
-                             onClick={(e) => {
-                                e.preventDefault();
-                                handleRemove(ingredients.indexOf(ingredient))
-                            }}>Remove</button>
+                                id="remove-button"
+                                className="button is-small"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    handleRemove(ingredients.indexOf(ingredient))
+                                }}>
+                                -
+                            </button>
                         </li>
 
                     ))}
