@@ -8,14 +8,9 @@ import SearchPage from "./Components/SearchPage";
 
 function App() {
   return (
-    <article className="message">
-      <div className="message-header">
-        <p>test bulma</p>
-        <button className="delete" aria-label="delete"></button>
-      </div>
-      <div className="message-body">test bulma</div>
+    
     <SearchPage/>
-    </article>
+    
   );
 }
 

@@ -31,7 +31,7 @@ export default function SearchForm() {
         <>
             <form >
 
-                <h2>List your ingredients</h2>
+                <label>List your ingredients</label>
                 <div className="field has-addons">
                     <div className="control">
 
@@ -55,8 +55,10 @@ export default function SearchForm() {
                         </button>
                 </div>
                 <ul>
+                    
                     {ingredients.map(ingredient => (
-                        <li key={ingredients.indexOf(ingredient)}>{ingredient}
+                        
+                        <li className="li" key={ingredients.indexOf(ingredient)}>{ingredient}
 
                             <button
                                 id="remove-button"
