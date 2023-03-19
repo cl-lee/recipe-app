@@ -3,38 +3,39 @@ import Navbar from "./Navbar.js";
 import "./styles/Recipe.css";
 import { Link } from "react-router-dom";
 import imageOne from "./assets/dish.png";
-import imageTwo from "./assets/groceries.png"
+import imageTwo from "./assets/groceries.png";
 
 function Recipe() {
   return (
-    <div>
-      {/* NAVIGATION BAR */}
+    <div id="recipe-results">
+      {/* Navigation bar */}
       <Navbar></Navbar>
+
+      {/* Page header */}
+      <header id="recipe-page-header">
+        <h1 id="recipe-page-title">What you can make</h1>
+        <img id="decoration-dish" src={imageOne} alt="A healthy salad dish" />
+      </header>
+
+      {/* Display recipes here */}
       <main id="recipe-page-main">
-        {/* decoration image 1 */}
-        <header id="recipe-page-header">
-          {/* PAGE TITLE */}
-          <h1 id="recipe-page-title">What you can make</h1>
-          <img
-            id="decoration-dish"
-            src={imageOne}
-            alt="A healthy salad dish"
-          />
-        </header>
-        {/* RECIPE CARD (ResultCarousel) */}
         <ResultCarousel></ResultCarousel>
       </main>
 
-      {/* EDIT SEARCH BUTTON (goes back to search page)*/}
+      {/* Page footer*/}
       <footer id="recipe-page-footer">
-          {/* <button className="button is-rounded is-medium is-responsive">
+        {/* Edit search button */}
+        <div className="buttons is-centered">
+          <button className="button is-rounded is-medium is-responsive">
             Edit Search
           </button>
+        </div>
+        {/* decoration image 2 */}
         <img
-            id="decoration-groceries"
-            src={imageTwo}
-            alt="Fresh grocery items"
-          /> */}
+          id="decoration-groceries"
+          src={imageTwo}
+          alt="Fresh grocery items"
+        />
       </footer>
     </div>
   );

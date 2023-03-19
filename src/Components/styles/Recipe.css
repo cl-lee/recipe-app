@@ -1,10 +1,12 @@
-#recipe-page-main {
+#recipe-results {
+  height: 90vh;
   overflow: hidden;
 }
 
 #recipe-page-header {
   padding: 1.5rem;
   position: relative;
+  height: 20vh;
 }
 
 #recipe-page-title {
@@ -14,29 +16,31 @@
 }
 
 #decoration-dish {
+  overflow: visible;
   width: 60%;
-  height: 150%;
+  height: 130%;
   position: absolute;
   top: -90%;
   right: -25%;
   object-fit: cover;
   z-index: -1;
-  overflow: visible;
+}
+
+#recipe-page-main {
+  height: 50vh;
 }
 
 #recipe-page-footer {
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
+  height: 20vh;
+  position: relative;
 }
 
 #decoration-groceries {
-  width: 60%;
-  height: 150%;
+  width: 40%;
+  height: 100%;
   position: absolute;
   bottom: 100%;
-  left: -25%;
+  left: -15%;
   object-fit: cover;
   z-index: -1;
   overflow: visible;
