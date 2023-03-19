@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import "./search-form.css"
 
 export default function SearchForm() {
 
@@ -20,12 +20,12 @@ export default function SearchForm() {
     }
 
     function handleRemove(id) {
-       
+
         const newList = ingredients.filter((item) => ingredients.indexOf(item) !== id)
-      setIngredient(newList)
+        setIngredient(newList)
         console.log(id)
-        console.log('new list',newList)
-        console.log('ingredients list',ingredients)
+        console.log('new list', newList)
+        console.log('ingredients list', ingredients)
     }
     return (
         <>
@@ -39,17 +39,21 @@ export default function SearchForm() {
                     id="ingredient"
                     value={newIngredient}
                     onChange={(e) => setNewIngredient(e.target.value)} />
-                <button onClick={(e) => {
-                    e.preventDefault()
-                    addIngredient()
-                    // console.log(ingredients, newIngredient)
-                }}
+                <button 
+                    className="button"
+                    onClick={(e) => {
+                        e.preventDefault()
+                        addIngredient()
+                        // console.log(ingredients, newIngredient)
+                    }}
                     id="add">Add</button>
                 <ul>
                     {ingredients.map(ingredient => (
                         <li key={ingredients.indexOf(ingredient)}>{ingredient}
-                            
-                            <button onClick={(e) => {
+
+                            <button
+                            className="button"
+                             onClick={(e) => {
                                 e.preventDefault();
                                 handleRemove(ingredients.indexOf(ingredient))
                             }}>Remove</button>
@@ -57,6 +61,7 @@ export default function SearchForm() {
 
                     ))}
                 </ul>
+                <button className="button" id="search-button">SEARCH</button>
 
             </form>
 
