@@ -1,3 +1,7 @@
+html, body {
+  
+}
+
 #nav-bar {
   height: 10vh;
   background-color: #2d3047;
@@ -18,7 +22,6 @@
 }
 
 #recipe-page-main {
-  height: 80vh;
   overflow: hidden;
 }
 
@@ -34,25 +37,35 @@
 }
 
 #decoration-dish {
-  width: 50%;
-  height: 100%;
+  width: 60%;
+  height: 150%;
   position: absolute;
-  top: -70%;
-  right: -12%;
+  top: -90%;
+  right: -25%;
   object-fit: cover;
   z-index: -1;
   overflow: visible;
 }
 
 #recipe-page-footer {
-  height: 20vh;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#decoration-groceries {
+  width: 60%;
+  height: 150%;
+  position: absolute;
+  bottom: 100%;
+  left: -25%;
+  object-fit: cover;
+  z-index: -1;
+  overflow: visible;
 }
 
 @media (min-width: 768px) {
-  /* #decoration-dish {
-    top: -13vh;
-  } */
-
   #recipe-page-title {
     font-size: 3rem;
   }
