@@ -45,7 +45,7 @@
   height: 100%;
   position: absolute;
   bottom: 100%;
-  left: -15%;
+  left: -10%;
   object-fit: cover;
   z-index: -1;
   overflow: visible;
