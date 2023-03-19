@@ -1,13 +1,17 @@
 import { useState } from "react"
 import "./search-form.css"
 
+
+
+
 export default function SearchForm() {
     // states to store list of ingredients and new ingredient written in the input field
     const [ingredients, setIngredient] = useState([]);
     const [newIngredient, setNewIngredient] = useState('');
 
 
-
+    // ************ FUNCTIONS ****************
+    // add new ingredient to the list
     function addIngredient() {
         if (newIngredient !== '') {
 
@@ -19,19 +23,24 @@ export default function SearchForm() {
         }
     }
 
+    // remove ingredient from list
     function handleRemove(id) {
-
+        // filters ingredients array and only returns the elements with different index numbers
         const newList = ingredients.filter((item) => ingredients.indexOf(item) !== id)
+        // update the ingredient state with the filtered array
         setIngredient(newList)
-        console.log(id)
-        console.log('new list', newList)
-        console.log('ingredients list', ingredients)
+    
+        
     }
+
+
+    //*************** JSX RETURN ***************
     return (
         <>
             <form >
 
                 <label>List your ingredients</label>
+                {/* div for search input and button */}
                 <div className="field has-addons">
                     <div className="control">
 
@@ -42,22 +51,25 @@ export default function SearchForm() {
                             className="input"
                             value={newIngredient}
                             onChange={(e) => setNewIngredient(e.target.value)} />
-                            </div>
-                        <button
-                            id="add-button"
-                            className="button "
-                            onClick={(e) => {
-                                e.preventDefault()
-                                addIngredient()
+                    </div>
+                    <button
+                        id="add-button"
+                        className="button "
+                        onClick={(e) => {
+                            e.preventDefault()
+                            //adds the new ingredient to the ingredients state array
+                            addIngredient()
 
-                            }}>
-                            +
-                        </button>
+                        }}>
+                        +
+                    </button>
                 </div>
+
+                {/* list of added ingredients */}
                 <ul>
-                    
+
                     {ingredients.map(ingredient => (
-                        
+                        // map the ingredients array and create a list item for each element
                         <li className="li" key={ingredients.indexOf(ingredient)}>{ingredient}
 
                             <button
@@ -65,6 +77,7 @@ export default function SearchForm() {
                                 className="button is-small"
                                 onClick={(e) => {
                                     e.preventDefault();
+                                    
                                     handleRemove(ingredients.indexOf(ingredient))
                                 }}>
                                 -
