@@ -1,4 +1,5 @@
 import ResultCarousel from "./ResultCarousel";
+import Navbar from "./Navbar.js";
 import "./styles/Recipe.css";
 import { Link } from "react-router-dom";
 import imageOne from "./assets/dish.png";
@@ -8,16 +9,7 @@ function Recipe() {
   return (
     <div>
       {/* NAVIGATION BAR */}
-      <nav id="nav-bar">
-        {/* Logo */}
-        <img
-          id="logo"
-          src="https://bulma.io/images/placeholders/128x128.png"
-          alt="Logo"
-        />
-        {/* Home button */}
-        {/* <button id="home-button"><Link to="/">Home</Link></button> */}
-      </nav>
+      <Navbar></Navbar>
       <main id="recipe-page-main">
         {/* decoration image 1 */}
         <header id="recipe-page-header">
