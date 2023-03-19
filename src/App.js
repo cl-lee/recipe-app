@@ -1,16 +1,22 @@
-import "./App.css";
-import "../src/Components/Home";
-import "../src/Components/MainPicture";
-import "./Components/SearchPage";
-import "../src/Components/Option2";
-import "../src/Components/Option3";
+
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './Components/Home';
+import 'bulma/css/bulma.min.css';
 import SearchPage from "./Components/SearchPage";
+import "./App.css";
 
 function App() {
   return (
-    
-    <SearchPage/>
-    
+    <BrowserRouter>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* Add other routes as needed */}
+        </Routes>
+      </div>
+    </BrowserRouter>
+
   );
 }
 
