@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: -30%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  width: 60%;
+  height: auto;
+}
+
+.active {
+  opacity: 1;
+}

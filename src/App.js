@@ -1,22 +1,18 @@
-import "./App.css";
-import Home from "../src/Components/Home";
-import MainPicture from "../src/Components/MainPicture";
-import Option1 from "../src/Components/Option1";
-import Option2 from "../src/Components/Option2";
-import Option3 from "../src/Components/Option3";
-import Recipe from "../src/Components/Recipe";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './Components/Home';
+import 'bulma/css/bulma.min.css';
 
 function App() {
   return (
-    // <Router basename="cl-lee/recipe-app">
-      <div>
-        <Recipe></Recipe>
-        {/* <Routes>
-          <Route path="search-results" element={<Recipe />} />
-        </Routes> */}
+    <BrowserRouter>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* Add other routes as needed */}
+        </Routes>
       </div>
-    // </Router>
+    </BrowserRouter>
   );
 }
 
