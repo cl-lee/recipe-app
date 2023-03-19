@@ -19,37 +19,39 @@
 
 #recipe-page-main {
   height: 80vh;
-  position: relative;
   overflow: hidden;
-}
-
-#decoration-dish {
-  height: auto;
-  width: 30%;
-  position: absolute;
-  top: -5vh;
-  right: 0%;
-  z-index: -1;
 }
 
 #recipe-page-header {
   padding: 1.5rem;
+  position: relative;
 }
 
 #recipe-page-title {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: black;
+}
+
+#decoration-dish {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: -70%;
+  right: -12%;
+  object-fit: cover;
+  z-index: -1;
+  overflow: visible;
 }
 
 #recipe-page-footer {
   height: 20vh;
 }
 
-@media (min-width: 480px) {
-  #decoration-dish {
+@media (min-width: 768px) {
+  /* #decoration-dish {
     top: -13vh;
-  } 
+  } */
 
   #recipe-page-title {
     font-size: 3rem;

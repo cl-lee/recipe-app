@@ -14,15 +14,19 @@ function Recipe() {
           src="https://bulma.io/images/placeholders/128x128.png"
           alt="Logo"
         />
-        {/* Home button */} 
+        {/* Home button */}
         {/* <button id="home-button"><Link to="/">Home</Link></button> */}
       </nav>
       <main id="recipe-page-main">
         {/* decoration image 1 */}
-        <img id="decoration-dish" src={dishImage} alt="A healthy salad dish" />
         <header id="recipe-page-header">
           {/* PAGE TITLE */}
           <h1 id="recipe-page-title">What you can make</h1>
+          <img
+            id="decoration-dish"
+            src={dishImage}
+            alt="A healthy salad dish"
+          />
         </header>
         {/* RECIPE CARD (ResultCarousel) */}
         <ResultCarousel></ResultCarousel>
