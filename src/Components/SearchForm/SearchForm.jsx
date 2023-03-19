@@ -21,9 +21,11 @@ export default function SearchForm() {
 
     function handleRemove(id) {
        
-        const newList = ingredients.filter((item) => ingredients[id] !== id)
+        const newList = ingredients.filter((item) => ingredients.indexOf(item) !== id)
       setIngredient(newList)
         console.log(id)
+        console.log('new list',newList)
+        console.log('ingredients list',ingredients)
     }
     return (
         <>
@@ -40,7 +42,7 @@ export default function SearchForm() {
                 <button onClick={(e) => {
                     e.preventDefault()
                     addIngredient()
-                    console.log(ingredients, newIngredient)
+                    // console.log(ingredients, newIngredient)
                 }}
                     id="add">Add</button>
                 <ul>
