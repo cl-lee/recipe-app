@@ -1,19 +1,18 @@
-import "./App.css";
-import "../src/Components/Home";
-import "../src/Components/MainPicture";
-import "../src/Components/Option1";
-import "../src/Components/Option2";
-import "../src/Components/Option3";
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './Components/Home';
+import 'bulma/css/bulma.min.css';
 
 function App() {
   return (
-    <article class="message">
-      <div class="message-header">
-        <p>test bulma</p>
-        <button class="delete" aria-label="delete"></button>
+    <BrowserRouter>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* Add other routes as needed */}
+        </Routes>
       </div>
-      <div class="message-body">test bulma</div>
-    </article>
+    </BrowserRouter>
   );
 }
 
