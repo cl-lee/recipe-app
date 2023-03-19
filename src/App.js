@@ -7,7 +7,8 @@ import SearchPage from "./Components/SearchPage";
 import "./App.css";
 
 function App() {
-  return (
+  return (<>
+  <Home/>
     <BrowserRouter>
       <div className="container">
         <Routes>
@@ -16,6 +17,7 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
+  </>
 
   );
 }
