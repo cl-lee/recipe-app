@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-between;
   padding: 1vh 1vw 1vh 1vw;
+  width: 100vw;
+  position: absolute;
 }
 
 #nav-bar #logo {
@@ -15,4 +17,10 @@
   border-radius: 1rem;
   background-color: #466c43;
   color: #ffffff;
+}
+
+#container {
+  margin-left: 0; 
+  margin-right: 0;
+  /* width: 100vw; */
 }

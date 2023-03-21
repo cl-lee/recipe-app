@@ -6,7 +6,7 @@ export default function SearchPage() {
       <>
       <Navbar/>
       <SearchForm/>
-      
+      <img id="veggies" src="./veggies.png" alt="vegetable basket"/>
       </>
     );
   }

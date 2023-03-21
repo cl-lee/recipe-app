@@ -38,13 +38,14 @@ body {
 }
 
 form {
+    z-index: 4;
     position: absolute;
     top: 15vh;
-    left: 20vw;
+    left: 10vw;
     border: #2D3047 solid 3px;
     border-radius: 30px;
     padding: 30px 20px 20px 20px;
-    height: 60vh;
+    height: 80vh;
     width: 30vw;
     background-color: rgb(218, 210, 216, 0.4);
     
@@ -70,4 +71,13 @@ label {
     margin-top: 20px;
     margin-left: 20%;
     font-size: 20px;
+}
+
+
+#veggies {
+    /* z-index: 0; */
+    position: absolute;
+    scale: 0.7;
+    right: -10%;
+    bottom: -130vh;
 }

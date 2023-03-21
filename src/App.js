@@ -11,7 +11,7 @@ function App() {
   
     <BrowserRouter>
       
-      <div className="container">
+      <div className="container" id='container'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<SearchPage />} />
