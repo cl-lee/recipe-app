@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./styles/Navbar.css"
 
 export default function Navbar() {
@@ -13,8 +13,9 @@ export default function Navbar() {
           alt="Logo"
         />
         {/* Home button */}
-        {/* react router link: <Link to="/"></Link> */}
+        <NavLink to="/">
         <button id="home-button">Home</button>
+        </NavLink>
       </nav>
     </div>
   );
