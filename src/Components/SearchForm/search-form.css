@@ -54,11 +54,13 @@ form {
 .field{
     margin-top: 5vh;
 }
+
 .control {
     margin-left: 5%;
     
     width: 75%;
 }
+
 label {
     font-size: 24px;
     margin-left: 5%;
@@ -78,6 +80,44 @@ label {
     /* z-index: 0; */
     position: absolute;
     scale: 0.7;
-    right: -10%;
+    right: -20%;
     bottom: -130vh;
+}
+
+#styling {
+    position: absolute;
+    right: 0;
+    top: 20vh;
+}
+
+#text-healthy {
+    font-weight: bold;
+    font-size: 17vh;
+    left: 40%;
+    top: -5vh;
+    position: relative;
+    letter-spacing: 0.2vh;
+}
+
+#text-vegetarian {
+    transform: rotate(90deg);
+    position: absolute;
+    right: -100%;
+    top: 25vh;
+    font-size: 15vh;
+}
+#text-find-recipes {
+    font-size: 7vh;
+    position: absolute;
+    top: -7vh;
+    left: 50vh;
+}
+
+#text-cook {
+    font-size: 7vh;
+    position: absolute;
+    left: 80%;
+    top: 20vh;
+    letter-spacing: 0.2vh;
+    width: 500px;
 }
