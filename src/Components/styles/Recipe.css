@@ -2,7 +2,6 @@
   /* height: 90vh; */
   overflow: hidden;
   /* margin-top: 10vh; */
-  background-color: #F4DF20;
 }
 
 #recipe-page-header {
@@ -56,17 +55,6 @@
 
 .card {
   z-index: 1;
-}
-
-#left,
-#right {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-}
-
-#right {
-  right: 0;
 }
 
 @media (min-width: 768px) {

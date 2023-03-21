@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "./search-form.css"
-
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -88,7 +88,7 @@ console.log(ingredientArray)
 
                     ))}
                 </ul>
-                <button className="button" id="search-button">SEARCH</button>
+                <NavLink to="/search-results"><button className="button" id="search-button">SEARCH</button></NavLink>
 
             </form>
 

@@ -7,8 +7,7 @@ import imageOne from "./assets/dish.png";
 import imageTwo from "./assets/groceries.png";
 
 function Recipe() {
-  // for navigating between sets of recipe cards
-  // const [startingIndex, setStartingIndex] = useState(0);
+
 
   return (
     <div>
@@ -22,13 +21,6 @@ function Recipe() {
 
         {/* Display recipes here */}
         <main id="recipe-page-main">
-          {/* Buttons for navigating between sets of recipe cards*/}
-          {/* <button id="left" className="button">
-          Left
-        </button>
-        <button id="right" className="button">
-          Right
-        </button> */}
 
           {/* <!--~First row of recipe cards~--> */}
           <div className="columns is-desktop mx-5">
@@ -173,9 +165,9 @@ function Recipe() {
         <footer id="recipe-page-footer">
           {/* Edit search button */}
           <div className="buttons is-centered">
-            <button className="button is-rounded is-large is-responsive">
+            <Link to="/search"><button className="button is-rounded is-large is-responsive">
               Edit Search
-            </button>
+            </button></Link>
           </div>
           {/* decoration image 2 */}
           <img
