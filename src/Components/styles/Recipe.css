@@ -1,12 +1,13 @@
 #recipe-results {
-  height: 90vh;
+  /* height: 90vh; */
   overflow: hidden;
+  margin-top: 10vh;
 }
 
 #recipe-page-header {
   padding: 1.5rem;
   position: relative;
-  height: 20vh;
+  /* height: 20vh; */
 }
 
 #recipe-page-title {
@@ -23,20 +24,21 @@
   top: -90%;
   right: -25%;
   object-fit: cover;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 #recipe-page-main {
-  height: 50vh;
+  /* height: 50vh; */
+  position: relative;
 }
 
 #recipe-page-footer {
-  height: 20vh;
+  /* height: 20vh; */
   position: relative;
 }
 
 #recipe-page-footer button {
-  background-color: #B6671E;
+  background-color: #b6671e;
   color: white;
 }
 
@@ -47,8 +49,23 @@
   bottom: 80%;
   left: -12%;
   object-fit: cover;
-  z-index: -1;
+  /* z-index: -1; */
   overflow: visible;
+}
+
+.card {
+  z-index: 1;
+}
+
+#left,
+#right {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+#right {
+  right: 0;
 }
 
 @media (min-width: 768px) {
