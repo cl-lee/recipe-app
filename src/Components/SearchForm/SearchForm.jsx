@@ -32,8 +32,10 @@ export default function SearchForm() {
     
         
     }
+localStorage.setItem("test", ingredients)
+let ingredientArray = ingredients
 
-
+console.log(ingredientArray)
     //*************** JSX RETURN ***************
     return (
         <>

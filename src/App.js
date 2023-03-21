@@ -9,10 +9,12 @@ import "./App.css";
 function App() {
   return (<>
   <Home/>
+  {/* <SearchPage/> */}
     <BrowserRouter>
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/search" element={<SearchPage />} />
           {/* Add other routes as needed */}
         </Routes>
       </div>
