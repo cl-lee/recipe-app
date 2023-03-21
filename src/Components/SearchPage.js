@@ -6,7 +6,8 @@ export default function SearchPage() {
       <>
       <Navbar/>
       <SearchForm/>
-      <img id="veggies" src="./veggies.png" alt="vegetable basket"/>
+      <div id="veggies"></div>
+      {/* <img id="veggies" src="./veggies.png" alt="vegetable basket"/> */}
       <div id="styling">
         <p id="text-find-recipes">find recipes</p>
         <p id="text-healthy">eat healthy</p>

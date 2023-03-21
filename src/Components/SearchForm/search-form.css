@@ -78,10 +78,19 @@ label {
 
 #veggies {
     /* z-index: 0; */
+    background-image: url("./veggies.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    height: 70vh;
+    width: 65vw;
     position: absolute;
-    scale: 0.7;
-    right: -20%;
-    bottom: -130vh;
+    display: block;
+    right: -35%;
+    top: 45vh;
+    /* scale: 0.7; */
+
+    
 }
 
 #styling {
