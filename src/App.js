@@ -8,9 +8,9 @@ import "./App.css";
 
 function App() {
   return (<>
-  <Home/>
-  {/* <SearchPage/> */}
+  
     <BrowserRouter>
+       <Home/>
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />

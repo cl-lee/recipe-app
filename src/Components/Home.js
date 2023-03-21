@@ -35,9 +35,9 @@ function Home() {
       <div className="column">
         <h1 className="title">Choose an Option</h1>
         <div className="buttons">
-          {/* <NavLink href="/search"> */}
+          <NavLink to="/search">
             <button className="button is-primary">Option 1</button>
-          {/* </NavLink> */}
+          </NavLink>
           <button className="button is-info">Option 2</button>
           <button className="button is-success">Option 3</button>
         </div>
