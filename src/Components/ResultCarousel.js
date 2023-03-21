@@ -1,14 +1,9 @@
 
 
 function ResultCarousel() {
-    return (
-      <p>Something</p>
-    );
-  }
-
-
-
-
-
+  // return (
+    // Insert DisplayHits here
+  // );
+}
 
 export default ResultCarousel;
