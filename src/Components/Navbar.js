@@ -13,8 +13,7 @@ export default function Navbar() {
           alt="Logo"
         />
         {/* Home button */}
-        {/* react router link: <Link to="/"></Link> */}
-        <button id="home-button">Home</button>
+        <Link to="/"><button id="home-button">Home</button></Link>
       </nav>
     </div>
   );
