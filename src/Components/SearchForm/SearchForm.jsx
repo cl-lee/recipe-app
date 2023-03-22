@@ -32,8 +32,12 @@ export default function SearchForm() {
     
         
     }
+
+
+
 localStorage.setItem("test", JSON.stringify(ingredients))
-let ingredientArray = ingredients
+// let ingredientArray = ingredients
+
 
 console.log(localStorage)
     //*************** JSX RETURN ***************
