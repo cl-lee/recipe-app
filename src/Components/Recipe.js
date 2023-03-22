@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ResultCarousel from "./ResultCarousel";
 import Navbar from "./Navbar.js";
 import "./styles/Recipe.css";
@@ -8,6 +8,26 @@ import imageTwo from "./assets/groceries.png";
 
 function Recipe() {
 
+  // pseudocode for fetch requests
+
+  // On mount: run fetch request
+  const [hits, setHits] = useState([]);
+
+  useEffect(() => {
+  // retrieve query terms from localstorage
+    const ingredientsList = localStorage.getItem("test");
+    // replace spacing and commas in ingredientsList with %20 and %2C respectively
+    const searchQueryComma = ingredientsList.replaceAll(",", "%2C");
+    const searchQuerySpace = searchQueryComma.replaceAll(" ", "%20");
+    // console.log(searchQuerySpace);
+    // console.log(`https://api.edamam.com/api/recipes/v2?type=public&q=${searchQuerySpace}&app_id=75b02161&app_key=753511efadcc7174b03a8b7232bc5bc1`);
+    fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${searchQuerySpace}&app_id=75b02161&app_key=753511efadcc7174b03a8b7232bc5bc1`)
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        setHits(json.hits);
+      });
+    }, []);
 
   return (
     <div>
