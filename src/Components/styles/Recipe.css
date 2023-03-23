@@ -33,13 +33,12 @@
   object-fit: cover;
 }
 
-#edit-search-button {
-  background-color: #b6671e;
-  color: white;
+.card {
+  z-index: 1;
 }
 
 #recipe-card {
-  background-color: #0ac43c;
+  background-color: #29db18;
   box-shadow: 0.25em 0.25em 0.25em grey;
   border-radius: 1em;
 }
@@ -49,8 +48,9 @@
   box-shadow: -0.2em 0.2em 0.2em grey;
 }
 
-.card {
-  z-index: 1;
+#edit-search-button {
+  background-color: #b6671e;
+  color: white;
 }
 
 @media (min-width: 480px) {
