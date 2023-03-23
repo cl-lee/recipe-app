@@ -6,9 +6,8 @@ import imageOne from "./assets/dish.png";
 import imageTwo from "./assets/groceries.png";
 
 export default function Recipe() {
-
   const [hits, setHits] = useState([]);
-  
+
   // Run fetch request on mount
   // useEffect(() => {
   //   // retrieve query terms from localstorage
@@ -30,150 +29,155 @@ export default function Recipe() {
     <div>
       <Navbar></Navbar>
       <div id="recipe-results">
-
         {/* Page header */}
-          <h1 id="recipe-page-title">What you can make</h1>
-          <img id="decoration-dish" src={imageOne} alt="A healthy salad dish" />
+        <h1 id="recipe-page-title">What you can make</h1>
+
+        {/* decorative image one */}
+        <img id="decoration-dish" src={imageOne} alt="A healthy salad dish" />
+        {/* decorative image 2 */}
+        <img
+          id="decoration-groceries"
+          src={imageTwo}
+          alt="Fresh grocery items"
+        />
 
         {/* Display recipes here */}
-        <main id="recipe-page-main">
-          {/* <!--~First row of recipe cards~--> */}
-          <div className="columns is-desktop mx-5">
-            {/* <!-- Spacing --> */}
-            <div className="column is-0-mobile is-1 p-0"></div>
+        {/* <!--~First row of recipe cards~--> */}
+        <div className="columns is-desktop mx-5">
+          {/* <!-- Spacing --> */}
+          <div className="column is-0-mobile is-1 p-0"></div>
 
-            {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
-            <div className="column is-4-desktop m-2 p-5">
-              <div className="card">
-                <div className="card-content">
-                  <div className="media">
-                    <div className="media-left">
-                      <figure className="image is-128x128">
-                        <img
-                          src="https://bulma.io/images/placeholders/96x96.png"
-                          alt="Placeholder image"
-                        />
-                      </figure>
-                    </div>
-                    <div className="media-content is-hidden-mobile">
-                      <p className="title is-5">placeholder</p>
-                      <p className="is-size-7 is-size-5-fullhd">
-                        To be replaced with actual recipe card <a>@bulmaio</a>
-                      </p>
-                    </div>
+          {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
+          <div className="column is-4-desktop m-2 p-5">
+            <div className="card">
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-left">
+                    <figure className="image is-128x128">
+                      <img
+                        src="https://bulma.io/images/placeholders/96x96.png"
+                        alt="Placeholder image"
+                      />
+                    </figure>
                   </div>
-                  <div class="content is-hidden-tablet">
-                    <p className="title is-5">Placeholder</p>
+                  <div className="media-content is-hidden-mobile">
+                    <p className="title is-5">placeholder</p>
                     <p className="is-size-7 is-size-5-fullhd">
                       To be replaced with actual recipe card <a>@bulmaio</a>
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
-            <div className="column is-4-desktop m-2 p-5">
-              <div className="card">
-                <div className="card-content">
-                  <div className="media">
-                    <div className="media-left">
-                      <figure className="image is-128x128">
-                        <img
-                          src="https://bulma.io/images/placeholders/96x96.png"
-                          alt="Placeholder image"
-                        />
-                      </figure>
-                    </div>
-                    <div className="media-content is-hidden-mobile">
-                      <p className="title is-5">Placeholder</p>
-                      <p className="is-size-7 is-size-5-fullhd">
-                        To be replaced with actual recipe card <a>@bulmaio</a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="content is-hidden-tablet">
-                    <p className="title is-5">Placeholder</p>
-                    <p className="is-size-7 is-size-5-fullhd">
-                      To be replaced with actual recipe card <a>@bulmaio</a>
-                    </p>
-                  </div>
+                <div class="content is-hidden-tablet">
+                  <p className="title is-5">Placeholder</p>
+                  <p className="is-size-7 is-size-5-fullhd">
+                    To be replaced with actual recipe card <a>@bulmaio</a>
+                  </p>
                 </div>
               </div>
             </div>
-
-            {/* <!-- Spacing --> */}
-            <div className="column is-0-mobile is-3 p-0"></div>
           </div>
 
-          {/* <!--~Second row of recipe cards~--> */}
-          <div className="columns is-desktop mx-5">
-            {/* <!-- Spacing --> */}
-            <div className="column is-0-mobile is-3 p-0"></div>
-            {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
-            <div className="column is-4-desktop m-2 p-5">
-              <div className="card">
-                <div className="card-content">
-                  <div className="media">
-                    <div className="media-left">
-                      <figure className="image is-128x128">
-                        <img
-                          src="https://bulma.io/images/placeholders/96x96.png"
-                          alt="Placeholder image"
-                        />
-                      </figure>
-                    </div>
-                    <div className="media-content is-hidden-mobile">
-                      <p className="title is-5">Placeholder</p>
-                      <p className="is-size-7 is-size-5-fullhd">
-                        To be replaced with actual recipe card <a>@bulmaio</a>
-                      </p>
-                    </div>
+          {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
+          <div className="column is-4-desktop m-2 p-5">
+            <div className="card">
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-left">
+                    <figure className="image is-128x128">
+                      <img
+                        src="https://bulma.io/images/placeholders/96x96.png"
+                        alt="Placeholder image"
+                      />
+                    </figure>
                   </div>
-                  <div class="content is-hidden-tablet">
+                  <div className="media-content is-hidden-mobile">
                     <p className="title is-5">Placeholder</p>
                     <p className="is-size-7 is-size-5-fullhd">
                       To be replaced with actual recipe card <a>@bulmaio</a>
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
-            <div className="column is-4-desktop m-2 p-5">
-              <div className="card">
-                <div className="card-content">
-                  <div className="media">
-                    <div className="media-left">
-                      <figure className="image is-128x128">
-                        <img
-                          src="https://bulma.io/images/placeholders/96x96.png"
-                          alt="Placeholder image"
-                        />
-                      </figure>
-                    </div>
-                    <div className="media-content is-hidden-mobile">
-                      <p className="title is-5">Placeholder</p>
-                      <p className="is-size-7 is-size-5-fullhd">
-                        To be replaced with actual recipe card <a>@bulmaio</a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="content is-hidden-tablet">
-                    <p className="title is-5">Placeholder</p>
-                    <p className="is-size-7 is-size-5-fullhd">
-                      To be replaced with actual recipe card <a>@bulmaio</a>
-                    </p>
-                  </div>
+                <div class="content is-hidden-tablet">
+                  <p className="title is-5">Placeholder</p>
+                  <p className="is-size-7 is-size-5-fullhd">
+                    To be replaced with actual recipe card <a>@bulmaio</a>
+                  </p>
                 </div>
               </div>
             </div>
-
-            {/* <!-- Spacing --> */}
-            <div className="column is-0-mobile is-1 p-0"></div>
           </div>
-        </main>
+
+          {/* <!-- Spacing --> */}
+          <div className="column is-0-mobile is-3 p-0"></div>
+        </div>
+
+        {/* <!--~Second row of recipe cards~--> */}
+        <div className="columns is-desktop mx-5">
+          {/* <!-- Spacing --> */}
+          <div className="column is-0-mobile is-3 p-0"></div>
+          {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
+          <div className="column is-4-desktop m-2 p-5">
+            <div className="card">
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-left">
+                    <figure className="image is-128x128">
+                      <img
+                        src="https://bulma.io/images/placeholders/96x96.png"
+                        alt="Placeholder image"
+                      />
+                    </figure>
+                  </div>
+                  <div className="media-content is-hidden-mobile">
+                    <p className="title is-5">Placeholder</p>
+                    <p className="is-size-7 is-size-5-fullhd">
+                      To be replaced with actual recipe card <a>@bulmaio</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="content is-hidden-tablet">
+                  <p className="title is-5">Placeholder</p>
+                  <p className="is-size-7 is-size-5-fullhd">
+                    To be replaced with actual recipe card <a>@bulmaio</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
+          <div className="column is-4-desktop m-2 p-5">
+            <div className="card">
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-left">
+                    <figure className="image is-128x128">
+                      <img
+                        src="https://bulma.io/images/placeholders/96x96.png"
+                        alt="Placeholder image"
+                      />
+                    </figure>
+                  </div>
+                  <div className="media-content is-hidden-mobile">
+                    <p className="title is-5">Placeholder</p>
+                    <p className="is-size-7 is-size-5-fullhd">
+                      To be replaced with actual recipe card <a>@bulmaio</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="content is-hidden-tablet">
+                  <p className="title is-5">Placeholder</p>
+                  <p className="is-size-7 is-size-5-fullhd">
+                    To be replaced with actual recipe card <a>@bulmaio</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* <!-- Spacing --> */}
+          <div className="column is-0-mobile is-1 p-0"></div>
+        </div>
 
         {/* Page footer*/}
         <footer id="recipe-page-footer">
@@ -185,12 +189,6 @@ export default function Recipe() {
               </button>
             </Link>
           </div>
-          {/* decoration image 2 */}
-          <img
-            id="decoration-groceries"
-            src={imageTwo}
-            alt="Fresh grocery items"
-          />
         </footer>
       </div>
     </div>

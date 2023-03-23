@@ -1,7 +1,6 @@
 #recipe-results {
-  overflow: hidden;
+  /* overflow-x: hidden; */
   width: 100vw;
-  position: relative;
 }
 
 #recipe-page-title {
@@ -23,9 +22,15 @@
   object-fit: cover;
 }
 
-#recipe-page-main {
-  /* height: 50vh; */
-  position: relative;
+#decoration-groceries {
+  position: fixed;
+  overflow: visible;
+  width: 40%;
+  height: 50%;
+  object-position: 50% 50%;
+  bottom: -8%;
+  left: -10%;
+  object-fit: cover;
 }
 
 #recipe-page-footer {
@@ -36,17 +41,6 @@
 #recipe-page-footer button {
   background-color: #b6671e;
   color: white;
-}
-
-#decoration-groceries {
-  width: 40%;
-  height: 100%;
-  position: absolute;
-  bottom: 80%;
-  left: -12%;
-  object-fit: cover;
-  /* z-index: -1; */
-  overflow: visible;
 }
 
 #recipe-card {
