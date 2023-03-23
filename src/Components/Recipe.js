@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import ResultCarousel from "./ResultCarousel";
 import Navbar from "./Navbar.js";
 import "./styles/Recipe.css";
@@ -14,8 +14,9 @@ function Recipe() {
   const [hits, setHits] = useState([]);
 
   useEffect(() => {
-  // retrieve query terms from localstorage
-    const ingredientsList = localStorage.getItem("test");
+    // retrieve query terms from localstorage
+    const ingredientsList = 'eggs, bacon';
+    //const ingredientsList = localStorage.getItem("test");
     // replace spacing and commas in ingredientsList with %20 and %2C respectively
     const searchQueryComma = ingredientsList.replaceAll(",", "%2C");
     const searchQuerySpace = searchQueryComma.replaceAll(" ", "%20");
@@ -25,7 +26,7 @@ function Recipe() {
         console.log(json);
         setHits(json.hits);
       });
-    }, []);
+  }, []);
 
   return (
     <div>
@@ -44,67 +45,41 @@ function Recipe() {
           <div className="columns is-desktop mx-5">
             {/* <!-- Spacing --> */}
             <div className="column is-0-mobile is-1 p-0"></div>
-
             {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
-            <div className="column is-4-desktop m-2 p-5">
+            {hits.map((item, index) => <div className="column is-4-desktop m-2 p-5" key={index + "-recipe"}>
               <div className="card">
                 <div className="card-content">
                   <div className="media">
                     <div className="media-left">
                       <figure className="image is-128x128">
                         <img
-                          src="https://bulma.io/images/placeholders/96x96.png"
-                          alt="Placeholder image"
+                          src={item.recipe.image}
+                          alt={item.recipe.label}
+                          loading="lazy"
                         />
                       </figure>
                     </div>
                     <div className="media-content is-hidden-mobile">
-                      <p className="title is-5">Placeholder</p>
+                      <p className="title is-5">{item.recipe.label}</p>
+                      <ul>
+                        {item.recipe.ingredientLines.map((ingredient, index) =>
+                          <li ley={index + ingredient}>{ingredient}</li>
+                        )}
+                      </ul>
                       <p className="is-size-7 is-size-5-fullhd">
-                        To be replaced with actual recipe card <a>@bulmaio</a>
+                        <a href={item.recipe.shareAs} target="_blank">@{item.recipe.source}</a>
                       </p>
                     </div>
                   </div>
-                  <div class="content is-hidden-tablet">
-                    <p className="title is-5">Placeholder</p>
+                  <div className="content is-hidden-tablet">
+                    <p className="title is-5">{item.recipe.label}</p>
                     <p className="is-size-7 is-size-5-fullhd">
-                      To be replaced with actual recipe card <a>@bulmaio</a>
+                      <a href={item.recipe.shareAs} target="_blank">@{item.recipe.source}</a>
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
-            <div className="column is-4-desktop m-2 p-5">
-              <div className="card">
-                <div className="card-content">
-                  <div className="media">
-                    <div className="media-left">
-                      <figure className="image is-128x128">
-                        <img
-                          src="https://bulma.io/images/placeholders/96x96.png"
-                          alt="Placeholder image"
-                        />
-                      </figure>
-                    </div>
-                    <div className="media-content is-hidden-mobile">
-                      <p className="title is-5">Placeholder</p>
-                      <p className="is-size-7 is-size-5-fullhd">
-                        To be replaced with actual recipe card <a>@bulmaio</a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="content is-hidden-tablet">
-                    <p className="title is-5">Placeholder</p>
-                    <p className="is-size-7 is-size-5-fullhd">
-                      To be replaced with actual recipe card <a>@bulmaio</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            </div>)}
             {/* <!-- Spacing --> */}
             <div className="column is-0-mobile is-3 p-0"></div>
           </div>
@@ -113,65 +88,46 @@ function Recipe() {
           <div className="columns is-desktop mx-5">
             {/* <!-- Spacing --> */}
             <div className="column is-0-mobile is-3 p-0"></div>
-            {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
-            <div className="column is-4-desktop m-2 p-5">
-              <div className="card">
-                <div className="card-content">
-                  <div className="media">
-                    <div className="media-left">
-                      <figure className="image is-128x128">
-                        <img
-                          src="https://bulma.io/images/placeholders/96x96.png"
-                          alt="Placeholder image"
-                        />
-                      </figure>
-                    </div>
-                    <div className="media-content is-hidden-mobile">
-                      <p className="title is-5">Placeholder</p>
-                      <p className="is-size-7 is-size-5-fullhd">
-                        To be replaced with actual recipe card <a>@bulmaio</a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="content is-hidden-tablet">
-                    <p className="title is-5">Placeholder</p>
-                    <p className="is-size-7 is-size-5-fullhd">
-                      To be replaced with actual recipe card <a>@bulmaio</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+
 
             {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
-            <div className="column is-4-desktop m-2 p-5">
+            {hits.map((item, index) => <div className="column is-4-desktop m-2 p-5" key={index + "-recipe"}>
               <div className="card">
                 <div className="card-content">
                   <div className="media">
                     <div className="media-left">
                       <figure className="image is-128x128">
                         <img
-                          src="https://bulma.io/images/placeholders/96x96.png"
-                          alt="Placeholder image"
+                          src={item.recipe.image}
+                          alt={item.recipe.label}
+                          loading="lazy"
                         />
                       </figure>
                     </div>
                     <div className="media-content is-hidden-mobile">
-                      <p className="title is-5">Placeholder</p>
+                      <p className="title is-5">{item.recipe.label}</p>
+                      <ul>
+                        {item.recipe.ingredientLines.map((ingredient, index) =>
+                          <li ley={index + ingredient}>{ingredient}</li>
+                        )}
+                      </ul>
                       <p className="is-size-7 is-size-5-fullhd">
-                        To be replaced with actual recipe card <a>@bulmaio</a>
+                        <a href={item.recipe.shareAs} target="_blank">@{item.recipe.source}</a>
                       </p>
                     </div>
                   </div>
-                  <div class="content is-hidden-tablet">
-                    <p className="title is-5">Placeholder</p>
+                  <div className="content is-hidden-tablet">
+                    <p className="title is-5">{item.recipe.label}</p>
                     <p className="is-size-7 is-size-5-fullhd">
-                      To be replaced with actual recipe card <a>@bulmaio</a>
+                      <a href={item.recipe.shareAs} target="_blank">@{item.recipe.source}</a>
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
+            </div>)}
+
+
 
             {/* <!-- Spacing --> */}
             <div className="column is-0-mobile is-1 p-0"></div>
@@ -194,8 +150,8 @@ function Recipe() {
             alt="Fresh grocery items"
           />
         </footer>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }
 
