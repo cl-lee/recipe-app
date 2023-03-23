@@ -161,7 +161,27 @@ label {
     #text-vegetarian {
         font-size: 8vw;
     }
+  
+}
+
+@media only screen and (max-width: 1300px) {
     #veggies {
-        
+        max-height: 50vh;
+        top: 50vh;
     }
+    #text-vegetarian {
+        display: none;
+    }
+   #text-healthy {
+    left: 62vw;
+    top: 10vh;
+   }
+   #text-find-recipes {
+    top: 2vh;
+    left: 70vw;
+   }
+   #text-cook {
+    top: 25vh;
+    left: 71vw;
+   }
 }

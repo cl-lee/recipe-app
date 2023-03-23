@@ -13,7 +13,7 @@ export default function SearchPage() {
         <p id="text-find-recipes">find recipes</p>
         <p id="text-healthy">eat healthy</p>
         <p id="text-vegetarian">vegetarian</p>
-        <p id="text-cook">what to cook</p>
+        <p id="text-cook">bold flavors</p>
         
       </div>
       </>
