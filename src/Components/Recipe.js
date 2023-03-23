@@ -11,6 +11,7 @@ export default function Recipe() {
   // Run fetch request on mount
   useEffect(() => {
     // retrieve query terms from localstorage
+   //const ingredientsList = 'eggs, bacon, potato, avocado, beans';
     const ingredientsList = localStorage.getItem("test");
     // replace spacing and commas in ingredientsList with %20 and %2C respectively
     const searchQueryComma = ingredientsList.replaceAll(",", "%2C");
