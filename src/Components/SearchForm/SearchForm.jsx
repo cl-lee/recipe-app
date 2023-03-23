@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "./search-form.css"
-
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -32,10 +32,14 @@ export default function SearchForm() {
     
         
     }
-localStorage.setItem("test", ingredients)
-let ingredientArray = ingredients
 
-console.log(ingredientArray)
+
+
+localStorage.setItem("test", JSON.stringify(ingredients))
+// let ingredientArray = ingredients
+
+
+console.log(localStorage)
     //*************** JSX RETURN ***************
     return (
         <>
@@ -88,7 +92,7 @@ console.log(ingredientArray)
 
                     ))}
                 </ul>
-                <button className="button" id="search-button">SEARCH</button>
+                <NavLink to="/search-results"><button className="button" id="search-button">SEARCH</button></NavLink>
 
             </form>
 

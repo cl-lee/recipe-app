@@ -13,33 +13,33 @@ function Home() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setActiveIndex(activeIndex === images.length - 1 ? 0 : activeIndex + 1);
-    }, 6000);
+    }, 3000);
 
     return () => clearInterval(intervalId);
   }, [activeIndex, images.length]);
 
   return (
-    <div className="columns">
-      <div className="column is-one-third">
-        <div className="carousel">
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`carousel image ${index}`}
-              className={`carousel-image ${index === activeIndex ? 'active' : ''}`}
-            />
-          ))}
+    <div className="container is-fluid">
+      <div className="columns is-vcentered is-flex-row-reverse">
+        <div className="column is-two-thirds">
+          <div className="carousel">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`carousel ${index}`}
+                className={`carousel-image ${index === activeIndex ? 'active' : ''}`}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="column">
-        <h1 className="title">Choose an Option</h1>
-        <div className="buttons">
-          <NavLink to="/search">
-            <button className="button is-primary">Option 1</button>
-          </NavLink>
-          <button className="button is-info">Option 2</button>
-          <button className="button is-success">Option 3</button>
+        <div className="column startingLogo">
+          <h1 className="title">Meal Mate</h1>
+          <div className="buttons">
+            <NavLink to="/search">
+              <button className="button is-primary">Get Started</button>
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>

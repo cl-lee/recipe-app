@@ -1,34 +1,27 @@
-# Pseudocode 
+# Recipe App 
 
-## MVP
-Pages needed:
-- Home
-    - Title
-    - Brand statement, headline
-    - option buttons that route to search page
-        - description of search types
-- Search by ingredients
-    - input to add ingredients and display them as a list
-        --> store them in an array
-    - ingredients can  also be removed
-    - search button
-        --> initialize fetch request
-        --> q = ingredients
-        --> route to recipes page
-    - back to home button
-- Recipes
-    - edit search button
-    - image + ingredients
-    - display fetch result
-    - can use cards to display
-    - short description
-    (-link to recipe)
+## Description 
+This is our React app that can help you decide on what to cook based on what ingredients you have. More options for searching will be added in the future.
 
-(- Selected recipe
-    - ingredients and instructions)
+## Usage
 
-## Extras
-- search by cuisine
-- search by meal type
-- search by diet
-- allergies 
+### Home screen 
+![Home screen](screenshots/home-screen.png)
+
+Here you are presented with the name of the app.
+
+### Ingredient listing
+![Ingredient listing](screenshots/ingredient-listing.png)
+
+Here you can enter your available ingredients.
+
+### Recipes to choose
+![Recipes to choose](screenshots/recipes-to-choose.png)
+
+And here are your options based on what you have.
+
+## Technologies Used
+
+- React: Used to build the frontend of the app
+- Bulma framework: Used for styling
+- Edamam API: Used to fetch recipe data
