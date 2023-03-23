@@ -1,30 +1,26 @@
 #recipe-results {
-  /* height: 90vh; */
   overflow: hidden;
-  /* margin-top: 10vh; */
-}
-
-#recipe-page-header {
-  padding: 1.5rem;
+  width: 100vw;
   position: relative;
-  /* height: 20vh; */
 }
 
 #recipe-page-title {
+  margin-top: 10vh;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: black;
+  padding: 1em 0 0 1em;
 }
 
 #decoration-dish {
+  position: fixed;
   overflow: visible;
-  width: 60%;
-  height: 130%;
-  position: absolute;
-  top: -90%;
-  right: -25%;
+  width: 40%;
+  height: 50%;
+  object-position: 50% 50%;
+  top: -20%;
+  right: -18%;
   object-fit: cover;
-  /* z-index: -1; */
 }
 
 #recipe-page-main {
@@ -53,8 +49,25 @@
   overflow: visible;
 }
 
+#recipe-card {
+  background-color: #0ac43c;
+  box-shadow: 0.25em 0.25em 0.25em grey;
+  border-radius: 1em;
+}
+
+#recipe-image-box {
+  border-radius: 1em;
+  box-shadow: -0.2em 0.2em 0.2em grey;
+}
+
 .card {
   z-index: 1;
+}
+
+@media (min-width: 480px) {
+  #recipe-page-title {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 768px) {
