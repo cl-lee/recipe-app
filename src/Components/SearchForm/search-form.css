@@ -87,7 +87,7 @@ label {
     width: 65vw;
     position: absolute;
     display: block;
-    right: -35%;
+    right: -20vw;
     top: 30vh;
     /* scale: 0.7; */ 
 }
@@ -107,17 +107,17 @@ label {
 }
 
 #styling {
-    position: absolute;
-    right: 0;
+    position: relative;
+    right: 5vw;
     top: 20vh;
     color: black;
 }
 
 #text-healthy {
     font-weight: bold;
-    font-size: 17vh;
-    left: 40%;
-    top: -5vh;
+    font-size: 8vw;
+    left: 47vw;
+    top: -3vw;
     position: relative;
     letter-spacing: 0.2vh;
 }
@@ -125,22 +125,23 @@ label {
 #text-vegetarian {
     transform: rotate(90deg);
     position: absolute;
-    right: -100%;
-    top: 25vh;
+    left: 80vw;
+    top: 10vw;
     font-size: 15vh;
 }
 #text-find-recipes {
-    font-size: 7vh;
+    font-size: 4vw;
     position: absolute;
-    top: -7vh;
-    left: 50vh;
+    top: -10vh;
+    left: 60vw;
+    width: 50vw;
 }
 
 #text-cook {
-    font-size: 7vh;
+    font-size: 4vw;
     position: absolute;
-    left: 80%;
-    top: 20vh;
+    left: 60vw;
+    top: 15vh;
     letter-spacing: 0.2vh;
     width: 500px;
 }
