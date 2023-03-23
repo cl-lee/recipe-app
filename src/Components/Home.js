@@ -27,7 +27,7 @@ function Home() {
               <img
                 key={index}
                 src={image}
-                alt={`carousel image ${index}`}
+                alt={`carousel ${index}`}
                 className={`carousel-image ${index === activeIndex ? 'active' : ''}`}
               />
             ))}
