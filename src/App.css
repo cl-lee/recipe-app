@@ -89,8 +89,10 @@
   }
   .startingLogo{
     position: relative;
-    top: 540px;
-    left: 80px;
+    top: 500px;
+    left: 60px;
+    width: 200px;
+    margin: 0;
   }
 
 }
