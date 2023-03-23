@@ -185,3 +185,27 @@ label {
     left: 71vw;
    }
 }
+@media only screen and (max-width: 1000px){
+form {
+    left: 25vw;
+
+}
+#text-healthy {
+    transform: rotate(-90deg);
+    left: -30vw;
+    font-size: 15vw;
+}
+
+#avocado {
+   display: none;
+}
+
+#text-find-recipes {
+left: 80vw;
+transform: rotate(25deg);
+}
+#text-cook {
+    transform: rotate(30deg);
+    left: 80vw;
+}
+}
