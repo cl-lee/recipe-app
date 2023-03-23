@@ -33,10 +33,14 @@ export default function Recipe() {
         <h1 id="recipe-page-title">What you can make</h1>
 
         {/* decorative image one */}
-        <img id="decoration-dish" src={imageOne} alt="A healthy salad dish" />
-        {/* decorative image 2 */}
         <img
-          id="decoration-groceries"
+          id="decorative-image-one"
+          src={imageOne}
+          alt="A healthy salad dish"
+        />
+        {/* decorative image two */}
+        <img
+          id="decorative-image-two"
           src={imageTwo}
           alt="Fresh grocery items"
         />
@@ -179,14 +183,17 @@ export default function Recipe() {
           <div className="column is-0-mobile is-1 p-0"></div>
         </div>
 
-          {/* Edit search button */}
-          <div className="buttons is-centered">
-            <Link to="/search">
-              <button id="edit-search-button" className="button is-rounded is-large is-responsive">
-                Edit Search
-              </button>
-            </Link>
-          </div>
+        {/* Edit search button */}
+        <div className="buttons is-centered">
+          <Link to="/search">
+            <button
+              id="edit-search-button"
+              className="button is-rounded is-large is-responsive"
+            >
+              Edit Search
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@
   padding: 1em 0 1em 1em;
 }
 
-#decoration-dish {
+#decorative-image-one {
   position: fixed;
   overflow: visible;
   width: 40%;
@@ -22,7 +22,7 @@
   object-fit: cover;
 }
 
-#decoration-groceries {
+#decorative-image-two {
   position: fixed;
   overflow: visible;
   width: 40%;
