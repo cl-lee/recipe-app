@@ -12,7 +12,7 @@ export default function Recipe() {
   useEffect(() => {
     // retrieve query terms from localstorage
    //const ingredientsList = 'eggs, bacon, potato, avocado, beans';
-    const ingredientsList = localStorage.getItem("test");
+    const ingredientsList = JSON.parse(localStorage.getItem("test")).toString();
     // replace spacing and commas in ingredientsList with %20 and %2C respectively
     const searchQueryComma = ingredientsList.replaceAll(",", "%2C");
     const searchQuerySpace = searchQueryComma.replaceAll(" ", "%20");
