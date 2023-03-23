@@ -19,25 +19,27 @@ function Home() {
   }, [activeIndex, images.length]);
 
   return (
-    <div className="columns">
-      <div className="column is-one-third">
-        <div className="carousel">
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`carousel image ${index}`}
-              className={`carousel-image ${index === activeIndex ? 'active' : ''}`}
-            />
-          ))}
+    <div className="container is-fluid">
+      <div className="columns is-vcentered is-flex-row-reverse">
+        <div className="column is-two-thirds">
+          <div className="carousel">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`carousel image ${index}`}
+                className={`carousel-image ${index === activeIndex ? 'active' : ''}`}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="column">
-        <h1 className="title">Meal Mate</h1>
-        <div className="buttons">
-          <NavLink to="/search">
-            <button className="button is-primary">Get Started</button>
-          </NavLink>
+        <div className="column startingLogo">
+          <h1 className="title">Meal Mate</h1>
+          <div className="buttons">
+            <NavLink to="/search">
+              <button className="button is-primary">Get Started</button>
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>

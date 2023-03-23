@@ -9,7 +9,7 @@ export default function Navbar() {
         {/* Logo */}
         <img
           id="logo"
-          src="https://bulma.io/images/placeholders/128x128.png"
+          src="./logo-1.png"
           alt="Logo"
         />
         {/* Home button */}
