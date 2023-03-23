@@ -4,8 +4,10 @@
   display: flex;
   justify-content: space-between;
   padding: 1vh 1vw 1vh 1vw;
-  width: 100vw;
-  position: absolute;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 #nav-bar #logo {
