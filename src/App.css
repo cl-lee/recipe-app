@@ -38,17 +38,60 @@
     transform: rotate(360deg);
   }
 }
+.carousel {
+  position: absolute;
+  overflow: hidden;
+  height: 750px;
+  width: 700px;
+  left: 100px;
+  outline-style: double;
+}
 
 .carousel-image {
   position: absolute;
   top: 0;
-  left: -30%;
+  left: 0;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
-  width: 60%;
-  height: auto;
+  height: 100%;
+  width: 100%;
 }
 
 .active {
   opacity: 1;
 }
+
+.startingLogo{
+  position: relative;
+  top: 340px;
+}
+@media (max-width: 1500px) {
+  .carousel {
+    height: 600px;
+    width: 600px;
+    left: 50px;
+    top: 50px;
+  }
+  .startingLogo{
+    position: relative;
+    top: 270px;
+    left: -100px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .carousel {
+    height: 500px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+  }
+  .startingLogo{
+    position: relative;
+    top: 540px;
+    left: 80px;
+  }
+
+}
+
