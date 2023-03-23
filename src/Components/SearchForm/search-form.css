@@ -209,3 +209,15 @@ transform: rotate(25deg);
     left: 80vw;
 }
 }
+
+@media only screen and (max-width: 750px) {
+    #text-find-recipes {
+        display: none;
+    }
+    #text-cook {
+        display: none;
+    }
+    form {
+        width: 65vw;
+    }
+}
