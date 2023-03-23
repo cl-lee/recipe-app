@@ -15,8 +15,7 @@ function Recipe() {
 
   useEffect(() => {
     // retrieve query terms from localstorage
-    const ingredientsList = 'eggs, bacon';
-    //const ingredientsList = localStorage.getItem("test");
+    const ingredientsList = localStorage.getItem("test");
     // replace spacing and commas in ingredientsList with %20 and %2C respectively
     const searchQueryComma = ingredientsList.replaceAll(",", "%2C");
     const searchQuerySpace = searchQueryComma.replaceAll(" ", "%20");
@@ -46,7 +45,7 @@ function Recipe() {
             {/* <!-- Spacing --> */}
             <div className="column is-0-mobile is-1 p-0"></div>
             {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
-            {hits.map((item, index) => <div className="column is-4-desktop m-2 p-5" key={index + "-recipe"}>
+            {hits.slice(0,2).map((item, index) => <div className="column is-4-desktop m-2 p-5" key={index + "-recipe"}>
               <div className="card">
                 <div className="card-content">
                   <div className="media">
@@ -92,7 +91,7 @@ function Recipe() {
 
 
             {/* <!-- PLACEHOLDER CARD, TO BE REPLACED WITH ACTUAL RECIPE CARD --> */}
-            {hits.map((item, index) => <div className="column is-4-desktop m-2 p-5" key={index + "-recipe"}>
+            {hits.slice(2,4).map((item, index) => <div className="column is-4-desktop m-2 p-5" key={index + "-recipe"}>
               <div className="card">
                 <div className="card-content">
                   <div className="media">
@@ -132,7 +131,6 @@ function Recipe() {
             {/* <!-- Spacing --> */}
             <div className="column is-0-mobile is-1 p-0"></div>
           </div>
-          {/* <ResultCarousel></ResultCarousel> */}
         </main>
 
         {/* Page footer*/}
