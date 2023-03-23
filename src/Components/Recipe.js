@@ -179,17 +179,14 @@ export default function Recipe() {
           <div className="column is-0-mobile is-1 p-0"></div>
         </div>
 
-        {/* Page footer*/}
-        <footer id="recipe-page-footer">
           {/* Edit search button */}
           <div className="buttons is-centered">
             <Link to="/search">
-              <button className="button is-rounded is-large is-responsive">
+              <button id="edit-search-button" className="button is-rounded is-large is-responsive">
                 Edit Search
               </button>
             </Link>
           </div>
-        </footer>
       </div>
     </div>
   );

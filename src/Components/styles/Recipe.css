@@ -8,7 +8,7 @@
   font-weight: bold;
   font-size: 1rem;
   color: black;
-  padding: 1em 0 0 1em;
+  padding: 1em 0 1em 1em;
 }
 
 #decoration-dish {
@@ -33,12 +33,7 @@
   object-fit: cover;
 }
 
-#recipe-page-footer {
-  /* height: 20vh; */
-  position: relative;
-}
-
-#recipe-page-footer button {
+#edit-search-button {
   background-color: #b6671e;
   color: white;
 }
