@@ -10,8 +10,7 @@ function App() {
   return (<>
   
     <BrowserRouter>
-      
-      <div className="container" id='container'>
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<SearchPage />} />

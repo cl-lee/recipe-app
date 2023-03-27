@@ -5,6 +5,7 @@ import image2 from '../images/image2.jpg';
 import image3 from '../images/image3.jpg';
 import '../App.css';
 import { NavLink } from 'react-router-dom';
+import './Home.css'
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -21,7 +22,7 @@ function Home() {
   return (
     <div className="container is-fluid">
       <div className="columns is-vcentered is-flex-row-reverse">
-        <div className="column is-two-thirds">
+        <div id="carousel-container" className="column is-two-thirds">
           <div className="carousel">
             {images.map((image, index) => (
               <img
