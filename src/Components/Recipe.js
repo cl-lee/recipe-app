@@ -11,7 +11,7 @@ export default function Recipe() {
   // Run fetch request on mount
   useEffect(() => {
     // retrieve query terms from localstorage
-   //const ingredientsList = 'eggs, bacon, potato, avocado, beans';
+    //const ingredientsList = 'eggs, bacon, potato, avocado, beans';
     const ingredientsList = JSON.parse(localStorage.getItem("test")).toString();
     // replace spacing and commas in ingredientsList with %20 and %2C respectively
     const searchQueryComma = ingredientsList.replaceAll(",", "%2C");
@@ -94,12 +94,10 @@ export default function Recipe() {
                   <div className="content is-hidden-tablet">
                     <p className="title is-5">{item.recipe.label}</p>
                     <ul>
-                        {item.recipe.ingredientLines.map(
-                          (ingredient, index) => (
-                            <li ley={index + ingredient}>{ingredient}</li>
-                          )
-                        )}
-                      </ul>
+                      {item.recipe.ingredientLines.map((ingredient, index) => (
+                        <li ley={index + ingredient}>{ingredient}</li>
+                      ))}
+                    </ul>
                     <p className="is-size-7 is-size-5-fullhd">
                       <a
                         href={item.recipe.shareAs}
