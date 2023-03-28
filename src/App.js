@@ -4,23 +4,20 @@ import Home from './Components/Home';
 import Recipe from './Components/Recipe.js';
 import 'bulma/css/bulma.min.css';
 import SearchPage from "./Components/SearchPage";
-import "./App.css";
+// import "./App.css";
 
 function App() {
-  return (<>
-  
+  return (  
     <BrowserRouter>
-      <div>
+      <div id="page-container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/search" element={<SearchPage />} />
           {/* Add other routes as needed */}
+          <Route path="/search" element={<SearchPage />} />
           <Route path="/search-results" element={<Recipe />} />
         </Routes>
       </div>
     </BrowserRouter>
-  </>
-
   );
 }
 
