@@ -162,6 +162,13 @@ export default function Recipe() {
                   </div>
                   <div className="content is-hidden-tablet">
                     <p className="title is-5">{item.recipe.label}</p>
+                    <ul>
+                        {item.recipe.ingredientLines.map(
+                          (ingredient, index) => (
+                            <li ley={index + ingredient}>{ingredient}</li>
+                          )
+                        )}
+                      </ul>
                     <p className="is-size-7 is-size-5-fullhd">
                       <a
                         href={item.recipe.shareAs}
