@@ -10,7 +10,7 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr ;
+  grid-template-rows: 1fr;
   width: 80%;
   height: 80%;
   outline-style: double;
@@ -21,7 +21,7 @@
   object-fit: cover;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
-  object-position: 0 -6.5em;
+  object-position: 0 0;
   width: 100%;
   height: 100%;
   grid-column: 1;
@@ -46,4 +46,10 @@
 #start-button-container {
   grid-column: 2 / span 1;
   grid-row: 3 / span 1;
+}
+
+@media (min-width: 1408px) {
+  .carousel-image {
+    object-position: 0 -6.5em;
+  }
 }
