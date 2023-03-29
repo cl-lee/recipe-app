@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
-import Recipe from './Components/Recipe.js';
-import 'bulma/css/bulma.min.css';
 import SearchPage from "./Components/SearchPage";
-// import "./App.css";
+import Recipe from './Components/Recipe.js';
+import "./App.css";
 
 function App() {
-  return (  
+  return (
     <BrowserRouter>
       <div id="page-container">
         <Routes>

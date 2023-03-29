@@ -4,7 +4,6 @@ import image2 from "../images/image2.jpg";
 import image3 from "../images/image3.jpg";
 import { NavLink } from "react-router-dom";
 import "./Home.css";
-import "bulma/css/bulma.min.css";
 
 /* div: className="container is-fluid" */
 /* id="home-page": className="is-centered " */
@@ -21,32 +20,43 @@ function Home() {
   }, [activeIndex, images.length]);
 
   return (
-    <div id="home-page-columns" class="columns is-flex-row-reverse m-0 p-0">
-      <div id="carousel" class="column is-half m-0 p-0">
-        <div className="carousel">
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`carousel ${index}`}
-              className={`carousel-image ${
-                index === activeIndex ? "active" : ""
-              }`}
-            />
-          ))}
+    <section class="hero is-fullheight m-0 p-0">
+      {/* <!-- Hero head: essential component for fullheight hero --> */}
+      <div id="carousel-hero-head m-0 p-0" class="hero-head"></div>
+
+      {/* <!-- Hero content: will be in the middle --> */}
+      <div class="hero-body m-0 p-0">
+        <div id="home-page-columns" class="columns is-tablet is-flex-row-reverse m-0 p-0">
+          <div id="carousel" class="column is-tablet-half m-0 p-0">
+            <div className="carousel">
+              {images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`carousel ${index}`}
+                  className={`carousel-image ${
+                    index === activeIndex ? "active" : ""
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+          <div id="home-page-panel" class="column is-tablet-half m-0 p-0">
+            <img id="logo" src="./logo-1.png" alt="Meal-Mate logo" />
+            <div class="buttons">
+              <NavLink to="/search">
+                <button id="start-button" className="button is-primary">
+                  Get Started
+                </button>
+              </NavLink>
+            </div>
+          </div>
         </div>
       </div>
-      <div id="home-page-panel" class="column m-0 p-0">
-        <img id="logo" src="./logo-1.png" alt="Meal-Mate logo" />
-        <div class="buttons">
-          <NavLink to="/search">
-            <button id="start-button" className="button is-primary">
-              Get Started
-            </button>
-          </NavLink>
-        </div>
-      </div>
-    </div>
+
+      {/* <!-- Hero footer: essential component for fullheight hero --> */}
+      <div class="hero-foot"></div>
+    </section>
   );
 }
 
