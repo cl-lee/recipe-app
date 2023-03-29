@@ -108,10 +108,23 @@
 }
 
 #home-page-panel {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 5fr 2fr 1fr;
+}
+
+#logo {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+#start-button-container {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
 }
 
 /* @media (min-width: 1024px) {

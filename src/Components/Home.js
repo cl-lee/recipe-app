@@ -43,9 +43,9 @@ function Home() {
           </div>
           <div id="home-page-panel" class="column is-tablet-half m-0 p-0">
             <img id="logo" src="./logo-1.png" alt="Meal-Mate logo" />
-            <div class="buttons">
+            <div id="start-button-container" class="buttons is-centered">
               <NavLink to="/search">
-                <button id="start-button" className="button is-primary">
+                <button className="button is-primary">
                   Get Started
                 </button>
               </NavLink>
