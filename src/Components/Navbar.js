@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./styles/Navbar.css"
+import "./styles/Navbar.css";
 
 export default function Navbar() {
   return (
@@ -7,13 +7,13 @@ export default function Navbar() {
       {/* NAVIGATION BAR */}
       <nav id="nav-bar">
         {/* Logo */}
-        <img
-          id="logo"
-          src="./logo-1.png"
-          alt="Logo"
-        />
+        <img id="logo" src="./logo-1.png" alt="Logo" />
         {/* Home button */}
-        <Link to="/"><button id="home-button">Home</button></Link>
+        <div id="button-container">
+          <Link to="/">
+            <button id="home-button" className="button is-responsive is-rounded">Home</button>
+          </Link>
+        </div>
       </nav>
     </div>
   );
