@@ -29,7 +29,7 @@ export default function Home() {
           class="columns is-tablet is-flex-row-reverse m-0 p-0"
         >
           <div id="carousel-column" class="column is-tablet-half m-0 p-0">
-            {/* <div id="carousel-container"> */}
+            <div id="carousel-container">
               {images.map((image, index) => (
                 <img
                   key={index}
@@ -40,7 +40,7 @@ export default function Home() {
                   }`}
                 />
               ))}
-            {/* </div> */}
+            </div>
           </div>
           <div id="logo-column" class="column is-tablet-half m-0 p-0">
             <img id="logo" src="./logo-1.png" alt="Meal-Mate logo" />
