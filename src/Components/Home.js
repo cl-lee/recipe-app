@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import 'bulma/css/bulma.min.css';
-import image1 from '../images/image1.jpg';
-import image2 from '../images/image2.jpg';
-import image3 from '../images/image3.jpg';
-import '../App.css';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import "./Home.css";
+import image1 from "../images/image1.jpg";
+import image2 from "../images/image2.jpg";
+import image3 from "../images/image3.jpg";
 
-function Home() {
+export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
   const images = [image1, image2, image3];
 
@@ -19,31 +18,43 @@ function Home() {
   }, [activeIndex, images.length]);
 
   return (
-    <div className="container is-fluid">
-      <div className="columns is-vcentered is-flex-row-reverse">
-        <div className="column is-two-thirds">
-          <div className="carousel">
-            {images.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`carousel ${index}`}
-                className={`carousel-image ${index === activeIndex ? 'active' : ''}`}
-              />
-            ))}
+    <section class="hero is-fullheight m-0 p-0">
+      {/* <!-- Hero head: essential component for Bulma fullheight hero --> */}
+      <div id="carousel-hero-head m-0 p-0" class="hero-head"></div>
+
+      {/* <!-- Bulma hero-body --> */}
+      <div class="hero-body m-0 p-0">
+        <div
+          id="home-page-columns"
+          class="columns is-tablet is-flex-row-reverse m-0 p-0"
+        >
+          <div id="carousel-column" class="column is-tablet-half m-0 p-0">
+            <div id="carousel-container">
+              {images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`carousel ${index}`}
+                  className={`carousel-image ${
+                    index === activeIndex ? "active" : ""
+                  }`}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="column startingLogo">
-          <h1 className="title">Meal Mate</h1>
-          <div className="buttons">
-            <NavLink to="/search">
-              <button className="button is-primary">Get Started</button>
-            </NavLink>
+          <div id="logo-column" class="column is-tablet-half m-0 p-0">
+            <img id="logo" src="./logo-1.png" alt="Meal-Mate logo" />
+            <div id="start-button-container" class="buttons is-centered">
+              <NavLink to="/search">
+                <button className="button is-primary">Get Started</button>
+              </NavLink>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* <!-- Hero footer: essential component for Bulma fullheight hero --> */}
+      <div class="hero-foot"></div>
+    </section>
   );
 }
-
-export default Home;

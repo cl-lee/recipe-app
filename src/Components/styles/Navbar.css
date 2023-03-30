@@ -3,10 +3,10 @@
   background-color: #2d3047;
   display: flex;
   justify-content: space-between;
-  padding: 1vh 1vw 1vh 1vw;
+  padding: 0.1em 3em 0.1em 0.5em;
   z-index: 2;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
 }
 
@@ -14,15 +14,21 @@
   border-radius: 50%;
 }
 
+#button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #home-button {
-  width: 5rem;
   border-radius: 1rem;
   background-color: #466c43;
   color: #ffffff;
+  border: none;
 }
 
-#container {
-  margin-left: 0; 
-  margin-right: 0;
+/* #container { */
+  /* margin-left: 0;  */
+  /* margin-right: 0; */
   /* width: 100vw; */
-}
+/* } */

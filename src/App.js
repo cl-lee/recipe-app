@@ -1,27 +1,21 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
-import Recipe from './Components/Recipe.js';
-import 'bulma/css/bulma.min.css';
 import SearchPage from "./Components/SearchPage";
-import "./App.css";
+import Recipe from './Components/Recipe.js';
 
 function App() {
-  return (<>
-  
+  return (
     <BrowserRouter>
-      
-      <div className="container" id='container'>
+      <div id="page-container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/search" element={<SearchPage />} />
           {/* Add other routes as needed */}
+          <Route path="/search" element={<SearchPage />} />
           <Route path="/search-results" element={<Recipe />} />
         </Routes>
       </div>
     </BrowserRouter>
-  </>
-
   );
 }
 

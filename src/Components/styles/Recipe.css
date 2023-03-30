@@ -38,9 +38,14 @@
 }
 
 #recipe-card {
-  background-color: #29db18;
+  background-color: #007100;
   box-shadow: 0.25em 0.25em 0.25em grey;
   border-radius: 1em;
+  color: white;
+}
+
+#recipe-card a {
+  color: #3aaed8;
 }
 
 #recipe-image-box {
