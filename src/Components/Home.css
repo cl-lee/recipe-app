@@ -34,18 +34,30 @@
 
 #logo-column {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 5fr 2fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "title"
+  "subtitle"
+  "start-btn";
 }
 
 #logo {
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
+ position: absolute;
+ height: 15vh;
+ left: 0;
 }
 
 #start-button-container {
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
+  grid-area: start-btn;
+}
+
+#title {
+  font-size: 5vw;
+  font-family: 'Lilita One', cursive;
+  font-weight: bold;
+  grid-area: title;
+  /* width: 50vw; */
 }
 
 @media (min-width: 1408px) {
