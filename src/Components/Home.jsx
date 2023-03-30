@@ -45,9 +45,10 @@ export default function Home() {
           <div id="logo-column" class="column is-tablet-half m-0 p-0">
             <img id="logo" src="./logo-1.png" alt="Meal-Mate logo" />
             <h1 id="title">Meal Mate</h1>
+            <h2 id="subtitle">Cook with what you have: discover delicious recipes with the ingredients you already have at home. Say goodbye to meal planning headaches and the frustration of not knowing what to do with what's in your fridge. </h2>
             <div id="start-button-container" class="buttons is-centered">
               <NavLink to="/search">
-                <button className="button is-primary">Get Started</button>
+                <button className="button is-primary" id="start">Get Started</button>
               </NavLink>
             </div>
           </div>

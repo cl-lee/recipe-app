@@ -35,11 +35,12 @@
 #logo-column {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 2fr;
   grid-template-areas: 
   "title"
   "subtitle"
   "start-btn";
+ 
 }
 
 #logo {
@@ -50,14 +51,30 @@
 
 #start-button-container {
   grid-area: start-btn;
+  margin-right: 10vw;
 }
 
 #title {
-  font-size: 5vw;
-  font-family: 'Lilita One', cursive;
+  font-size: 10vh;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   grid-area: title;
+  text-align: center;
+  margin-right: 10vw;
+  margin-top: 15vh;
+  color: black;
   /* width: 50vw; */
+}
+
+#subtitle {
+  font-size: 1.4rem;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin-right: 10vw;
+}
+
+#start {
+  width: 10vw;
 }
 
 @media (min-width: 1408px) {
