@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  width: 50vw;
+  width: 45vw;
   height: 100vh;
   outline-style: double;
 }
@@ -43,10 +43,11 @@
  
 }
 
-#logo {
+#main-logo {
  position: absolute;
  height: 15vh;
- left: 0;
+ left: 2vw;
+ opacity: 75%;
 }
 
 #start-button-container {
@@ -55,13 +56,14 @@
 }
 
 #title {
-  font-size: 10vh;
+  font-size: 14vh;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   grid-area: title;
   text-align: center;
   margin-right: 10vw;
-  margin-top: 15vh;
+  margin-top: 17vh;
+  margin-left: 5vw;
   color: black;
   /* width: 50vw; */
 }
@@ -70,11 +72,19 @@
   font-size: 1.4rem;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
-  margin-right: 10vw;
+  margin-right: 15vw;
+  margin-left: 10vw;
+  margin-top: 2vh;
 }
 
 #start {
   width: 10vw;
+  background-color: #33B61E;
+  font-weight: bolder;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-left: 5vw;
+  margin-bottom: 15vh;
 }
 
 @media (min-width: 1408px) {
