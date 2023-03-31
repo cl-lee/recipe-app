@@ -40,6 +40,7 @@
   "title"
   "subtitle"
   "start-btn";
+  height: 100vh;
  
 }
 
@@ -87,8 +88,52 @@
   margin-bottom: 15vh;
 }
 
-@media (min-width: 1408px) {
+/* @media (min-width: 1408px) {
   .carousel-image {
     object-position: 0 -6.5em;
   }
+} */
+
+@media only screen and (max-width: 1280px) {
+ #title {
+font-size: 10vh;
+ }
+ #start {
+  width: 200px;
+ }
+}
+
+@media only screen and (max-width: 1024px) {
+#subtitle {
+  font-size: medium;
+  margin-left: 5vw;
+  margin-right: 8vw;
+}
+}
+
+@media only screen and (max-width: 950px) {
+  #carousel-container {
+    height: 45vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #carousel-column {
+    height: 45vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+  }
+  #logo-column {
+    width: 100vw;
+    height: 65vh;
+    left: 0;
+  }
+#title {
+  margin: 0;
+}
+.carousel-image {
+  object-position: 0 -180px;
+}
 }
