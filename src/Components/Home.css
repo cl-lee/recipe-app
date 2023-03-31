@@ -120,7 +120,7 @@
     bottom: 0;
     right: 0;
   }
-
+  
   #carousel-column {
     height: 45vh;
     width: 100vw;
@@ -128,12 +128,16 @@
     bottom: 0;
   }
 
+  .carousel-image {
+    object-position: 0 -180px;
+  }
+  
   #home-page-columns {
     position: fixed;
     top: 0;
     height: 100vh;
   }
-
+  
   #logo-column {
     width: 100vw;
     height: 65vh;
@@ -149,13 +153,32 @@
     font-size: 20px;
     margin: 0 15vw;
   }
-  .carousel-image {
-    object-position: 0 -180px;
-  }
 
   #main-logo {
     bottom: 0;
     left: 80vw;
     height: 12vh;
   }
+}
+
+@media only screen and (max-width: 450px) {
+  .carousel-image {
+    object-position: 0 -50px;
+  }
+ #main-logo {
+  left: 75vw;
+  height: 10vh;
+ }
+
+ #title {
+font-size: 70px;
+margin:  8vh 0 0 0;
+ }
+
+ #subtitle {
+  font-size: 17px;
+ }
+ #start {
+  margin-top: 5vh;
+ }
 }
