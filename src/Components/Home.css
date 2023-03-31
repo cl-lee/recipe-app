@@ -36,19 +36,19 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1fr 2fr;
-  grid-template-areas: 
-  "title"
-  "subtitle"
-  "start-btn";
+  grid-template-areas:
+    "title"
+    "subtitle"
+    "start-btn";
   height: 100vh;
- 
+
 }
 
 #main-logo {
- position: absolute;
- height: 15vh;
- left: 2vw;
- opacity: 75%;
+  position: absolute;
+  height: 15vh;
+  left: 2vw;
+  opacity: 75%;
 }
 
 #start-button-container {
@@ -95,20 +95,21 @@
 } */
 
 @media only screen and (max-width: 1280px) {
- #title {
-font-size: 10vh;
- }
- #start {
-  width: 200px;
- }
+  #title {
+    font-size: 10vh;
+  }
+
+  #start {
+    width: 200px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-#subtitle {
-  font-size: medium;
-  margin-left: 5vw;
-  margin-right: 8vw;
-}
+  #subtitle {
+    font-size: medium;
+    margin-left: 5vw;
+    margin-right: 8vw;
+  }
 }
 
 @media only screen and (max-width: 950px) {
@@ -119,21 +120,42 @@ font-size: 10vh;
     bottom: 0;
     right: 0;
   }
+
   #carousel-column {
     height: 45vh;
     width: 100vw;
     position: absolute;
     bottom: 0;
   }
+
+  #home-page-columns {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+  }
+
   #logo-column {
     width: 100vw;
     height: 65vh;
-    left: 0;
+
   }
-#title {
-  margin: 0;
-}
-.carousel-image {
-  object-position: 0 -180px;
-}
+
+  #title {
+    margin-top: 7vh;
+    margin-left: 10vw;
+  }
+
+  #subtitle {
+    font-size: 20px;
+    margin: 0 15vw;
+  }
+  .carousel-image {
+    object-position: 0 -180px;
+  }
+
+  #main-logo {
+    bottom: 0;
+    left: 80vw;
+    height: 12vh;
+  }
 }
